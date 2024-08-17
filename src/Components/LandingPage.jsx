@@ -6,7 +6,7 @@ import customer1Image from './images/customer1.jpg';
 import customer2Image from './images/customer2.jpeg';
 import customer3Image from './images/customer3.jpg';
 import customer4Image from './images/customer4.jpg';
-import logoImage from './images/logo.png';
+
 
 const LandingPage = () => {
   const [buttonText, setButtonText] = useState('TRY NOW');
@@ -181,22 +181,22 @@ const reviews = [
   {
     stars: 4,
     comment: "QCVSS has revolutionized our medical practice. It's efficient and reliable, a must-have for any hospital.",
-    customer: "Dr. John Smith",
+    customer: "Srijeeta Das",
   },
   {
     stars: 5,
     comment: "The accuracy and ease of use of this system are unparalleled. We can't imagine going back to our old setup.",
-    customer: "Dr. Emily Watson",
+    customer: "Riddhiraj Chanda",
   },
   {
     stars: 4,
     comment: "Excellent integration of multiple monitoring systems into one portable device. It has made patient care much easier.",
-    customer: "Dr. Michael Brown",
+    customer: "Ritam Das",
   },
   {
     stars: 5,
     comment: "This system has significantly improved patient outcomes in our ICU. Highly recommended!",
-    customer: "Dr. Sarah Johnson",
+    customer: "Daibik Sengupta",
   },
 ];
 

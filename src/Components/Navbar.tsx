@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logoImage from './images/logo.png';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,17 +8,22 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+  
   const handleTabClick = (tabName: string) => {
     setSelectedTab(tabName);
     setIsMenuOpen(false);
-    setIsDropdownOpen(false);
+    if (tabName === 'General Information') {
+      setIsDropdownOpen(!isDropdownOpen);
+    } else {
+      setIsDropdownOpen(false);
+    }
   };
 
   return (
     <nav className="bg-gradient-to-r from-custom-black via-custom-dark-purple to-custom-purple text-white py-4 px-6 fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
-          <img src="./images/logo.png" alt="Brand Logo" className="h-8 w-8 mr-2" />
+          <img src={logoImage} alt="Brand Logo" className="h-8 w-8 mr-2" />
           <span className="text-xl font-semibold">Aragya</span>
         </div>
 
