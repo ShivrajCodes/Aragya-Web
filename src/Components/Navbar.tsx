@@ -1,23 +1,14 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logoImage from './images/logo.png';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectedTab, setSelectedTab] = useState('Home');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-  
-  const handleTabClick = (tabName: string) => {
-    setSelectedTab(tabName);
-    setIsMenuOpen(false);
-    if (tabName === 'General Information') {
-      setIsDropdownOpen(!isDropdownOpen);
-    } else {
-      setIsDropdownOpen(false);
-    }
-  };
 
   return (
     <nav className="bg-gradient-to-r from-custom-black via-custom-dark-purple to-custom-purple text-white py-4 px-6 fixed top-0 left-0 right-0 z-50">
@@ -28,33 +19,24 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="hidden md:flex space-x-8 justify-center flex-grow">
-          {['Home', 'Instructions', 'Components Used', 'General Information', 'About Us'].map(tab => (
+          {['Home', 'Instructions', 'Components Used', 'General Information', 'About Us'].map((tab) => (
             <div key={tab} className="relative">
-              <button
-                onClick={() => handleTabClick(tab)}
-                className={`text-white hover:text-gray-200 ${selectedTab === tab ? 'underline' : ''}`}
+              <Link
+                to={tab === 'Home' ? '/' : `/${tab.replace(/\s+/g, '-').toLowerCase()}`}
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-white hover:text-gray-200 transition-colors duration-300 ${location.pathname === `/${tab.replace(/\s+/g, '-').toLowerCase()}` || (tab === 'Home' && location.pathname === '/') ? 'font-bold' : ''}`}
               >
                 {tab}
-              </button>
-              {tab === 'General Information' && isDropdownOpen && (
-                <div className="absolute top-full mt-2 bg-white text-black rounded shadow-lg py-2">
-                  <button
-                    onClick={() => handleTabClick('View Emergency Uses')}
-                    className="block px-4 py-2 hover:bg-gray-200 w-full text-left"
-                  >
-                    View Emergency Uses
-                  </button>
-                  <button
-                    onClick={() => handleTabClick('View Parameters')}
-                    className="block px-4 py-2 hover:bg-gray-200 w-full text-left"
-                  >
-                    View Parameters
-                  </button>
-                </div>
-              )}
-              {selectedTab === tab && (
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-white mt-1 transition-all duration-300"></div>
-              )}
+              </Link>
+              {location.pathname === `/${tab.replace(/\s+/g, '-').toLowerCase()}` || (tab === 'Home' && location.pathname === '/') ? (
+                <div
+                  className="absolute bottom-0 left-0 w-full h-2 bg-white rounded-full transition-all duration-300 transform scale-x-110"
+                  style={{
+                    height: '4px', // Thicker underline
+                    borderRadius: '10px', // Rounded edges
+                  }}
+                />
+              ) : null}
             </div>
           ))}
         </div>
@@ -79,28 +61,33 @@ const Navbar: React.FC = () => {
 
       {isMenuOpen && (
         <div className="md:hidden mt-4 space-y-4">
-          {['Home', 'Instructions', 'Components Used', 'General Information', 'About Us'].map(tab => (
+          {['Home', 'Instructions', 'Components Used', 'General Information', 'About Us'].map((tab) => (
             <div key={tab}>
-              <button
-                onClick={() => handleTabClick(tab)}
-                className={`block w-full text-left text-white px-4 py-2 ${selectedTab === tab ? 'bg-gray-800' : ''}`}
+              <Link
+                to={tab === 'Home' ? '/' : `/${tab.replace(/\s+/g, '-').toLowerCase()}`}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block w-full text-left text-white px-4 py-2 transition-colors duration-300 ${
+                  location.pathname === `/${tab.replace(/\s+/g, '-').toLowerCase()}` || (tab === 'Home' && location.pathname === '/') ? 'bg-gray-800' : ''
+                }`}
               >
                 {tab}
-              </button>
+              </Link>
               {tab === 'General Information' && isDropdownOpen && (
                 <div className="pl-4 mt-2">
-                  <button
-                    onClick={() => handleTabClick('View Emergency Uses')}
+                  <Link
+                    to="/view-emergency-uses"
+                    onClick={() => setIsMenuOpen(false)}
                     className="block text-white hover:bg-gray-800 px-4 py-2"
                   >
                     View Emergency Uses
-                  </button>
-                  <button
-                    onClick={() => handleTabClick('View Parameters')}
+                  </Link>
+                  <Link
+                    to="/view-parameters"
+                    onClick={() => setIsMenuOpen(false)}
                     className="block text-white hover:bg-gray-800 px-4 py-2"
                   >
                     View Parameters
-                  </button>
+                  </Link>
                 </div>
               )}
             </div>
