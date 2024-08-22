@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
                 <div
                   className="absolute bottom-0 left-0 w-full h-2 bg-white rounded-full transition-all duration-300 transform scale-x-110"
                   style={{
-                    height: '4px', // Thicker underline
-                    borderRadius: '10px', // Rounded edges
+                    height: '4px',
+                    borderRadius: '10px',
                   }}
                 />
               ) : null}
