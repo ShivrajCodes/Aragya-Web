@@ -1,38 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import Navbar from './Navbar.tsx';
-import qvcssImage from './images/qvcss.png';
-import doctorImage from './images/doctor.png';
-import customer1Image from './images/customer1.jpg';
-import customer2Image from './images/customer2.jpeg';
-import customer3Image from './images/customer3.jpg';
-import customer4Image from './images/customer4.jpg';
-
+import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar.tsx";
+import qvcssImage from "./images/qvcss.png";
+import doctorImage from "./images/doctor.png";
+import customer1Image from "./images/customer1.jpg";
+import customer2Image from "./images/customer2.jpeg";
+import customer3Image from "./images/customer3.jpg";
+import customer4Image from "./images/customer4.jpg";
 
 const LandingPage = () => {
-  const [buttonText, setButtonText] = useState('TRY NOW');
+  const [buttonText, setButtonText] = useState("TRY NOW");
 
   useEffect(() => {
-    const fadeElements = document.querySelectorAll('.fade-up');
+    const fadeElements = document.querySelectorAll(".fade-up");
 
     const handleScroll = () => {
       fadeElements.forEach((el) => {
         const rect = el.getBoundingClientRect();
         if (rect.top < window.innerHeight - 50) {
-          el.classList.add('show');
+          el.classList.add("show");
         }
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const handleButtonClick = () => {
-    setButtonText('Coming Soon');
+    setButtonText("Coming Soon");
   };
 
   return (
@@ -49,11 +48,36 @@ const LandingPage = () => {
           </h2>
           <p className="mt-5 fade-up">
             About the QCVSS: QUADRA CARE VITAL SYNC SYSTEM...
-            <p> Designed for effortless patient care, Quadra Care Vital Sync System is a portable ventilator merged with ECG, pulse rate monitoring, and saline level monitoring system together in a single setup. It provides accurate respiratory support and continuous cardiovascular monitoring. The ventilator uses advanced sensors and controls algorithms, while on the other hand, the ECG attributes detection of real-life cardiac issues. The system is ideal for exigency as its compact design ensures easy transport and portability. Apart from that, an automated saline water monitoring system is also included to ensure the safe administration of saline monitoring solutions to patients. Sensors are utilized in the system to measure the saline level in the bottle, which will timely alert whenever the bottle is going to be empty and need a replacement. Integrated data loggers and transmitters collect and send real-time data to monitoring stations or cloud-based platforms for analysis, allowing healthcare providers to make decisions. The system enhances patient care and safety in medical treatment by ensuring precise delivery and continuous monitoring.</p>
+            <p>
+              {" "}
+              Designed for effortless patient care, Quadra Care Vital Sync
+              System is a portable ventilator merged with ECG, pulse rate
+              monitoring, and saline level monitoring system together in a
+              single setup. It provides accurate respiratory support and
+              continuous cardiovascular monitoring. The ventilator uses advanced
+              sensors and controls algorithms, while on the other hand, the ECG
+              attributes detection of real-life cardiac issues. The system is
+              ideal for exigency as its compact design ensures easy transport
+              and portability. Apart from that, an automated saline water
+              monitoring system is also included to ensure the safe
+              administration of saline monitoring solutions to patients. Sensors
+              are utilized in the system to measure the saline level in the
+              bottle, which will timely alert whenever the bottle is going to be
+              empty and need a replacement. Integrated data loggers and
+              transmitters collect and send real-time data to monitoring
+              stations or cloud-based platforms for analysis, allowing
+              healthcare providers to make decisions. The system enhances
+              patient care and safety in medical treatment by ensuring precise
+              delivery and continuous monitoring.
+            </p>
           </p>
         </div>
         <div className="w-full md:w-1/2 h-64 md:h-1/2 rounded-lg fade-up mt-10 md:mt-0">
-          <img src={qvcssImage} alt="QCVSS" className="w-full h-full object-cover rounded-lg" />
+          <img
+            src={qvcssImage}
+            alt="QCVSS"
+            className="w-full h-full object-cover rounded-lg"
+          />
         </div>
       </div>
 
@@ -64,20 +88,15 @@ const LandingPage = () => {
           </h3>
         </div>
 
-        <div className="space-y-8">
+        <div className=" w-1/3 mx-auto">
           {steps.map((step, index) => (
-            <div
-              key={index}
-              className={`flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-4 ${
-                index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-              } fade-up`}
-            >
-              <div className="w-full md:w-1/3">
+            <div key={index} className={"relative p-6"}>
+              <div className="">
                 <div
                   className={`p-4 rounded-lg shadow-lg bg-blue-600 text-white relative border-4 ${
                     index % 2 === 0
-                      ? 'border-t-4 border-l-4 border-b-4 border-custom-dark-purple'
-                      : 'border-t-4 border-r-4 border-b-4 border-custom-dark-purple'
+                      ? "border-t-4 border-l-4 border-b-4 border-custom-dark-purple"
+                      : "border-t-4 border-r-4 border-b-4 border-custom-dark-purple"
                   }`}
                 >
                   <h4 className="text-lg font-semibold">{step.date}</h4>
@@ -85,7 +104,14 @@ const LandingPage = () => {
                   <p className="text-sm">{step.description}</p>
                 </div>
               </div>
-              <div className="hidden md:block w-1/3 h-px bg-gray-300"></div>
+              <div
+                className={
+                  "hidden md:block w-1/2 h-[calc(100%+8px)] rounded-3xl  border-[8px]  border-blue-600 absolute top-0  " +
+                  (index % 2 === 0
+                    ? "border-r-0 rounded-r-none left-0"
+                    : "border-l-0 rounded-l-none right-0")
+                }
+              ></div>
             </div>
           ))}
         </div>
@@ -94,7 +120,11 @@ const LandingPage = () => {
       <div className="flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-10 mt-20 space-y-10 md:space-y-0">
         <div className="w-full md:w-1/4 h-64 fade-up">
           <div className="h-full rounded-lg flex items-center justify-center">
-            <img src={doctorImage} alt="Doctor" className="w-full h-full object-cover rounded-lg" />
+            <img
+              src={doctorImage}
+              alt="Doctor"
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
 
@@ -103,7 +133,11 @@ const LandingPage = () => {
             WHY CHOOSE US?
           </h3>
           <p>
-            Quadra Care Vital Sync System integrates the latest technology with healthcare to provide a seamless experience for both patients and doctors. Our system is designed to ensure the highest level of care and monitoring, making it the best choice for medical professionals worldwide.
+            Quadra Care Vital Sync System integrates the latest technology with
+            healthcare to provide a seamless experience for both patients and
+            doctors. Our system is designed to ensure the highest level of care
+            and monitoring, making it the best choice for medical professionals
+            worldwide.
           </p>
         </div>
       </div>
@@ -117,13 +151,17 @@ const LandingPage = () => {
             <div key={index} className="p-6 bg-gray-800 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gray-500 rounded-full mr-4">
-                  <img src={customerImages[index]} alt={`Customer ${index + 1}`} className="w-full h-full object-cover rounded-full" />
+                  <img
+                    src={customerImages[index]}
+                    alt={`Customer ${index + 1}`}
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
                 {Array.from({ length: 5 }).map((_, i) => (
                   <svg
                     key={i}
                     className={`w-5 h-5 ${
-                      i < review.stars ? 'text-yellow-400' : 'text-gray-500'
+                      i < review.stars ? "text-yellow-400" : "text-gray-500"
                     }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -141,8 +179,10 @@ const LandingPage = () => {
       </div>
 
       <div className="w-full px-6 md:px-10 mt-20 text-center space-y-5 fade-up">
-        <h3 className="text-2xl font-semibold">WHAT ARE YOU WAITING FOR? TRY OUR PRODUCT NOW!</h3>
-        
+        <h3 className="text-2xl font-semibold">
+          WHAT ARE YOU WAITING FOR? TRY OUR PRODUCT NOW!
+        </h3>
+
         <button
           className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-gray-600 transition duration-300"
           onClick={handleButtonClick}
@@ -158,48 +198,61 @@ const steps = [
   {
     date: "Jan 2023",
     title: "Component Integration",
-    description: "We started integration by merging 3 devices together, namely portable ventilator, ECG, and saline level monitoring system.",
+    description:
+      "We started integration by merging 3 devices together, namely portable ventilator, ECG, and saline level monitoring system.",
   },
   {
     date: "Feb 2023",
     title: "Software Integration",
-    description: "Quadra Care Vital Sync system was integrated with a real-time monitoring system.",
+    description:
+      "Quadra Care Vital Sync system was integrated with a real-time monitoring system.",
   },
   {
     date: "Mar 2023",
     title: "First Prototype Testing",
-    description: "After software integration, we tested the first prototype of Quadra Care Vital Sync System.",
+    description:
+      "After software integration, we tested the first prototype of Quadra Care Vital Sync System.",
   },
   {
     date: "May 2023",
     title: "Prototype Testing",
-    description: "The prototype testing of Quadra Care Vital Sync System was successful.",
+    description:
+      "The prototype testing of Quadra Care Vital Sync System was successful.",
   },
 ];
 
 const reviews = [
   {
     stars: 4,
-    comment: "QCVSS has revolutionized our medical practice. It's efficient and reliable, a must-have for any hospital.",
+    comment:
+      "QCVSS has revolutionized our medical practice. It's efficient and reliable, a must-have for any hospital.",
     customer: "Srijeeta Das",
   },
   {
     stars: 5,
-    comment: "The accuracy and ease of use of this system are unparalleled. We can't imagine going back to our old setup.",
+    comment:
+      "The accuracy and ease of use of this system are unparalleled. We can't imagine going back to our old setup.",
     customer: "Riddhiraj Chanda",
   },
   {
     stars: 4,
-    comment: "Excellent integration of multiple monitoring systems into one portable device. It has made patient care much easier.",
+    comment:
+      "Excellent integration of multiple monitoring systems into one portable device. It has made patient care much easier.",
     customer: "Ritam Das",
   },
   {
     stars: 5,
-    comment: "This system has significantly improved patient outcomes in our ICU. Highly recommended!",
+    comment:
+      "This system has significantly improved patient outcomes in our ICU. Highly recommended!",
     customer: "Daibik Sengupta",
   },
 ];
 
-const customerImages = [customer1Image, customer2Image, customer3Image, customer4Image];
+const customerImages = [
+  customer1Image,
+  customer2Image,
+  customer3Image,
+  customer4Image,
+];
 
 export default LandingPage;
