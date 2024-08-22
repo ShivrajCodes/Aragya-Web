@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/instructions" element={<Instructions />} />
           <Route path="/components-used" element={<ComponentsUsed />} />
-          {/* Add more routes as needed */}
+          
         </Routes>
       </div>
     </Router>
