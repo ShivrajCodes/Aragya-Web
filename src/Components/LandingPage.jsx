@@ -118,7 +118,7 @@ const LandingPage = () => {
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-10 mt-20 space-y-10 md:space-y-0">
-        <div className="w-full md:w-1/4 h-64 fade-up">
+      <div className="w-full md:w-1/3 h-96 md:h-[80%] fade-up">
           <div className="h-full rounded-lg flex items-center justify-center">
             <img
               src={doctorImage}
@@ -129,7 +129,7 @@ const LandingPage = () => {
         </div>
 
         <div className="w-full md:w-3/4 space-y-5 fade-up">
-          <h3 className="text-2xl font-semibold bg-gradient-to-r from-pink-300 via-red-300 to-white bg-clip-text text-transparent">
+        <h3 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-pink-300 via-red-300 to-white bg-clip-text text-transparent">
             WHY CHOOSE US?
           </h3>
           <p>
