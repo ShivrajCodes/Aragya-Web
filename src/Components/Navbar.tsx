@@ -12,10 +12,21 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-gradient-to-r from-custom-black via-custom-dark-purple to-custom-purple text-white py-4 px-6 fixed top-0 left-0 right-0 z-50">
+      <style>
+        {`
+          @font-face {
+            font-family: 'BlackCobra';
+            src: url('/fonts/black-cobra.regular.ttf') format('truetype');
+          }
+          .aragya-logo {
+            font-family: 'RetroQesmo', sans-serif;
+          }
+        `}
+      </style>
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <img src={logoImage} alt="Brand Logo" className="h-8 w-8 mr-2" />
-          <span className="text-xl font-semibold">Aragya</span>
+          <span className="text-xl font-semibold aragya-logo">ARAGYA</span>
         </div>
 
         <div className="hidden md:flex space-x-8 justify-center flex-grow">
