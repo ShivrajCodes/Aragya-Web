@@ -4,6 +4,8 @@ import Navbar from './Components/Navbar.tsx';
 import LandingPage from './Components/LandingPage';
 import Instructions from './Components/Instructions.tsx';
 import ComponentsUsed from './Components/ComponentsUsed.tsx';
+// import ViewEmergencyUses from './Components/ViewEmergencyUses';
+import Parameters from './Components/Parameters';
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/instructions" element={<Instructions />} />
           <Route path="/components-used" element={<ComponentsUsed />} />
-          
+          {/* Add ViewEmergencyUses route when ready */}
+          <Route path="/view-parameters" element={<Parameters />} />
         </Routes>
       </div>
     </Router>
