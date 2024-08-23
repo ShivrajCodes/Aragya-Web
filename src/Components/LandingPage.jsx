@@ -225,25 +225,25 @@ const reviews = [
   {
     stars: 4,
     comment:
-      "QCVSS has revolutionized our medical practice. It's efficient and reliable, a must-have for any hospital.",
+      "The Quadra Care Vital Sync System has truly revolutionized patient care in our hospital. Its integration of a ventilator, ECG, and saline level monitoring in one portable setup makes it incredibly convenient for both staff and patients. The real-time data transmission to monitoring stations has greatly enhanced our ability to make timely decisions. The compact design also makes it easy to move between rooms. Overall, it’s a reliable and innovative solution for critical care.",
     customer: "Srijeeta Das",
   },
   {
     stars: 5,
     comment:
-      "The accuracy and ease of use of this system are unparalleled. We can't imagine going back to our old setup.",
+      "I’ve been using the Quadra Care Vital Sync System for a few months now, and it’s become an indispensable tool in our ICU. The seamless integration of respiratory support and cardiovascular monitoring ensures that we can provide comprehensive care without the need for multiple devices. The automated saline monitoring feature is a game-changer, reducing the chances of human error. This system has significantly improved patient outcomes in our department.",
     customer: "Riddhiraj Chanda",
   },
   {
     stars: 4,
     comment:
-      "Excellent integration of multiple monitoring systems into one portable device. It has made patient care much easier.",
+      "The Quadra Care Vital Sync System is an excellent example of how technology can enhance patient care. The system’s ability to monitor vital signs in real-time and provide accurate respiratory support is impressive. I particularly appreciate the automated saline level monitoring, which ensures that patients receive the necessary fluids without interruption. The system’s portability is another advantage, making it ideal for emergency situations where quick responses are crucial.",
     customer: "Ritam Das",
   },
   {
     stars: 5,
     comment:
-      "This system has significantly improved patient outcomes in our ICU. Highly recommended!",
+      "As a healthcare professional, I’m always looking for ways to improve patient care, and the Quadra Care Vital Sync System has exceeded my expectations. The integration of advanced sensors and data loggers allows for continuous monitoring, which is essential in critical care settings. The system’s compact design and ease of use make it a practical choice for any healthcare facility. I highly recommend this system for its reliability and innovative approach to patient care.",
     customer: "Daibik Sengupta",
   },
 ];
