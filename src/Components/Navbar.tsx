@@ -44,6 +44,17 @@ const Navbar: React.FC = () => {
               >
                 {tab}
               </Link>
+              {location.pathname === `/${tab.replace(/\s+/g, '-').toLowerCase()}` ||
+              (tab === 'Home' && location.pathname === '/') ? (
+                <div
+                  className="absolute bottom-0 left-0 w-full h-1 bg-white rounded-full transition-all duration-300 transform scale-x-110"
+                  style={{
+                    height: '4px',
+                    borderRadius: '10px',
+                  }}
+                />
+              ) : null}
+              
               {tab === 'General Information' && (
                 <button onClick={toggleDropdown} className="ml-2 text-white">
                   ▼

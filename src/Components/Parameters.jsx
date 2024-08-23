@@ -14,25 +14,27 @@ const Parameters = () => {
 
   return (
     <div className="bg-gradient-to-r from-custom-black via-custom-dark-purple to-custom-purple text-white py-4 px-6 min-h-screen">
-      <h2 className="text-center text-xl mb-4 mt-20">Some General Parameters useful in day-to-day life</h2>
-      <table className="w-full border-collapse">
-        <thead>
-          <tr>
-            <th className="border border-gray-300 px-4 py-2">PARAMETERS</th>
-            <th className="border border-gray-300 px-4 py-2">HEALTHY VALUE</th>
-            <th className="border border-gray-300 px-4 py-2">ABNORMAL RATE</th>
-          </tr>
-        </thead>
-        <tbody>
-          {parameters.map((param, index) => (
-            <tr key={index}>
-              <td className="border border-gray-300 px-4 py-2">{param.name}</td>
-              <td className="border border-gray-300 px-4 py-2">{param.exactRate}</td>
-              <td className="border border-gray-300 px-4 py-2">{param.abnormalRate}</td>
+      <h2 className="text-center text-xl mb-4 mt-20">Some General Parameters Useful in Day-to-Day Life</h2>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-sm sm:text-base">
+          <thead>
+            <tr>
+              <th className="border border-gray-300 px-4 py-2">PARAMETERS</th>
+              <th className="border border-gray-300 px-4 py-2">HEALTHY VALUE</th>
+              <th className="border border-gray-300 px-4 py-2">ABNORMAL RATE</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {parameters.map((param, index) => (
+              <tr key={index}>
+                <td className="border border-gray-300 px-4 py-2">{param.name}</td>
+                <td className="border border-gray-300 px-4 py-2">{param.exactRate}</td>
+                <td className="border border-gray-300 px-4 py-2">{param.abnormalRate}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
