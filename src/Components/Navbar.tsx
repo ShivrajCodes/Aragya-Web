@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
   const handleGeneralInfoClick = () => {
     navigate('/view-emergency-uses');
     toggleDropdown();
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   return (
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
                   >
                     {tab}
                   </button>
-                  
+
                   {(location.pathname.startsWith('/view-emergency-uses') ||
                     location.pathname.startsWith('/view-parameters')) && (
                     <div
@@ -64,12 +64,10 @@ const Navbar: React.FC = () => {
                     />
                   )}
 
-                  
                   <button onClick={toggleDropdown} className="ml-2 text-white focus:outline-none">
                     ▼
                   </button>
 
-                  
                   {isDropdownOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-gradient-to-r from-custom-black via-custom-dark-purple to-custom-purple rounded-md shadow-lg py-1 z-20">
                       <Link
@@ -108,6 +106,18 @@ const Navbar: React.FC = () => {
                 >
                   {tab}
                 </Link>
+              )}
+              
+              {/* Underline for each tab */}
+              {(location.pathname === `/${tab.replace(/\s+/g, '-').toLowerCase()}` ||
+                (tab === 'Home' && location.pathname === '/')) && (
+                <div
+                  className="absolute bottom-0 left-0 w-full h-1 bg-white rounded-full transition-all duration-300 mt-20"
+                  style={{
+                    height: '4px',
+                    borderRadius: '10px',
+                  }}
+                />
               )}
             </div>
           ))}
@@ -148,12 +158,11 @@ const Navbar: React.FC = () => {
                   >
                     {tab}
                   </button>
-                  
+
                   <button onClick={toggleDropdown} className="ml-2 text-white focus:outline-none">
                     ▼
                   </button>
 
-                  
                   {isDropdownOpen && (
                     <div className="pl-4 mt-2 space-y-2">
                       <Link
