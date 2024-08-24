@@ -1,10 +1,17 @@
 import React from 'react';
+import inhalerImage from './images/inhaler.jpeg';
+import nebulizerImage from './images/nebu2.jpg';
+import cprImage from './images/cpr.png';
+import firstAidImage from './images/firstaid.jpg';
+import bpmImage from './images/bpm.jpg';
+import oximeterImage from './images/oximeter.jpg';
+import thermometerImage from './images/ther.jpg';
 
 const ViewEmergencyUses: React.FC = () => {
   return (
     <div className="flex flex-wrap justify-center gap-6 p-6 bg-gradient-to-r from-custom-black via-custom-dark-purple to-custom-purple min-h-screen">
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-72 text-left mt-20">
-        <img src="/images/inhaler.jpeg" alt="Inhaler" className="w-full h-40 object-cover" />
+        <img src={inhalerImage} alt="Inhaler" className="w-full h-40 object-cover" />
         <div className="bg-blue-600 text-white p-3 text-xl font-semibold text-center">Inhaler</div>
         <div className="p-4 text-base">
           <ul className="list-disc list-inside">
@@ -19,7 +26,7 @@ const ViewEmergencyUses: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-72 text-left mt-20">
-        <img src="/images/nebu2.jpg" alt="Nebulizer" className="w-full h-40 object-cover" />
+        <img src={nebulizerImage} alt="Nebulizer" className="w-full h-40 object-cover" />
         <div className="bg-blue-600 text-white p-3 text-xl font-semibold text-center">Nebulizer</div>
         <div className="p-4 text-base">
           <ul className="list-disc list-inside">
@@ -34,7 +41,7 @@ const ViewEmergencyUses: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-72 text-left mt-20">
-        <img src="/images/cpr.png" alt="CPR" className="w-full h-40 object-cover" />
+        <img src={cprImage} alt="CPR" className="w-full h-40 object-cover" />
         <div className="bg-blue-600 text-white p-3 text-xl font-semibold text-center">CPR</div>
         <div className="p-4 text-base">
           <ul className="list-disc list-inside">
@@ -49,7 +56,7 @@ const ViewEmergencyUses: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-72 text-left mt-20">
-        <img src="/images/firstaid.jpg" alt="First Aid" className="w-full h-40 object-cover" />
+        <img src={firstAidImage} alt="First Aid" className="w-full h-40 object-cover" />
         <div className="bg-blue-600 text-white p-3 text-xl font-semibold text-center">First Aid</div>
         <div className="p-4 text-base">
           <ul className="list-disc list-inside">
@@ -64,7 +71,7 @@ const ViewEmergencyUses: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-72 text-left mt-20">
-        <img src="/images/bpm.jpg" alt="Blood Pressure Machine" className="w-full h-40 object-cover" />
+        <img src={bpmImage} alt="Blood Pressure Machine" className="w-full h-40 object-cover" />
         <div className="bg-blue-600 text-white p-3 text-xl font-semibold text-center">Blood Pressure Machine</div>
         <div className="p-4 text-base">
           <ul className="list-disc list-inside">
@@ -79,7 +86,7 @@ const ViewEmergencyUses: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-72 text-left mt-20">
-        <img src="/images/oximeter.jpg" alt="Oximeter" className="w-full h-40 object-cover" />
+        <img src={oximeterImage} alt="Oximeter" className="w-full h-40 object-cover" />
         <div className="bg-blue-600 text-white p-3 text-xl font-semibold text-center">Oximeter</div>
         <div className="p-4 text-base">
           <ul className="list-disc list-inside">
@@ -94,7 +101,7 @@ const ViewEmergencyUses: React.FC = () => {
       </div>
 
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-72 text-left mt-20">
-        <img src="/images/ther.jpg" alt="Digital Thermometer" className="w-full h-40 object-cover" />
+        <img src={thermometerImage} alt="Digital Thermometer" className="w-full h-40 object-cover" />
         <div className="bg-blue-600 text-white p-3 text-xl font-semibold text-center">Digital Thermometer</div>
         <div className="p-4 text-base">
           <ul className="list-disc list-inside">
