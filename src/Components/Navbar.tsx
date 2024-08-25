@@ -107,12 +107,12 @@ const Navbar: React.FC = () => {
                   {tab}
                 </Link>
               )}
-              
+
               {/* Underline for each tab */}
               {(location.pathname === `/${tab.replace(/\s+/g, '-').toLowerCase()}` ||
                 (tab === 'Home' && location.pathname === '/')) && (
                 <div
-                  className="absolute bottom-0 left-0 w-full h-1 bg-white rounded-full transition-all duration-300 mt-20"
+                  className="absolute bottom-0 left-0 w-full h-1 bg-white rounded-full transition-all duration-300"
                   style={{
                     height: '4px',
                     borderRadius: '10px',

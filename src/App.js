@@ -6,6 +6,7 @@ import Instructions from './Components/Instructions.tsx';
 import ComponentsUsed from './Components/ComponentsUsed.tsx';
 import ViewEmergencyUses from './Components/ViewEmergencyUses.tsx';
 import Parameters from './Components/Parameters';
+import AboutUs from './Components/AboutUs'; 
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/components-used" element={<ComponentsUsed />} />
           <Route path="/view-emergency-uses" element={<ViewEmergencyUses />} />
           <Route path="/view-parameters" element={<Parameters />} />
+          <Route path="/about-us" element={<AboutUs />} /> 
         </Routes>
       </div>
     </Router>
