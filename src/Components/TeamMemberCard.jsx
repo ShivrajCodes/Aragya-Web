@@ -5,7 +5,7 @@ const TeamMemberCard = ({ name, role, image, description }) => {
 
   return (
     <div
-      className={`bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 ${
+      className={`bg-blue-500 rounded-lg shadow-lg overflow-hidden transition-all duration-300 ${
         expanded ? 'w-full' : 'w-64'
       }`}
       onClick={() => setExpanded(!expanded)}
@@ -18,12 +18,12 @@ const TeamMemberCard = ({ name, role, image, description }) => {
             expanded ? 'w-32 h-32' : 'w-20 h-20'
           }`}
         />
-        <h3 className="mt-4 text-lg font-medium text-gray-900">{name}</h3>
-        <p className="text-gray-600">{role}</p>
+        <h3 className="mt-4 text-lg font-medium text-white">{name}</h3>
+        <p className="text-gray-200">{role}</p>
       </div>
       {expanded && (
-        <div className="p-6 bg-gray-100">
-          <p className="text-gray-700">{description}</p>
+        <div className="p-6 bg-yellow-300">
+          <p className="text-gray-800">{description}</p>
         </div>
       )}
     </div>

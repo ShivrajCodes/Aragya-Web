@@ -3,10 +3,64 @@ import TeamMemberCard from './TeamMemberCard';
 
 const teamMembers = [
   {
+    name: 'Sandipan Dubey',
+    role: 'Leader,Aragya',
+    image: 'path_to_image',
+    description: 'Sandipan Dubey, leader of the Aragya project, is a visionary innovator and IoT enthusiast, driving impactful healthcare solutions.',
+  },
+  {
+    name: 'Soham Aich',
+    role: 'Co-Leader, Aragya',
+    image: 'path_to_image',
+    description: 'Soham Aich, co-leader of Aragya, is a brilliant ideator and IoT enthusiast, contributing innovative ideas to healthcare solutions.',
+  },
+  {
     name: 'Shivraj Bhattacharya',
     role: 'Frontend Developer',
+    image: '/images/shivraj.jpg',
+    description: 'Shivraj, a skilled frontend and backend developer, plays a crucial role in building and optimizing the project infrastructure.',
+  },
+  {
+    name: 'Ritam Das',
+    role: 'Tech-Lead and Electronics',
+    image: '/images/ritam.jpg',
+    description: 'Ritam Das, the tech lead of Aragya, excels in electronics, driving the technical advancements and innovations in the project.',
+  },
+  {
+    name: 'Riddhiraj Chanda',
+    role: 'Tech and Electronics',
     image: 'path_to_image',
-    description: 'Shivraj is a skilled frontend developer with 2 years of experience.',
+    description: 'Riddhiraj Chanda, a key contributor to Aragya, specializes in tech and electronics, enhancing tech capabilities of our project.',
+  },
+  {
+    name: 'Aratrika Shome',
+    role: 'Facilitator and Social media handle',
+    image: 'path_to_image',
+    description: 'Aratrika Shome, the facilitator and social media handler for Aragya, ensures smooth communication and manages online presence of the project.',
+  },
+  {
+    name: 'Srijeeta Das',
+    role: 'Lead Designer',
+    image: 'path_to_image',
+    description: 'Srijeeta Das, the lead designer for Aragya, specializes in UI/UX and hardware design, creating intuitive interfaces and innovative hardware solutions.                           ',
+  },
+  {
+    name: 'Simantini Das',
+    role: 'Cybersecurity, Tech & Asst. Designer',
+    image: '/images/simantini.jpg',
+    description: 'Simantini Das, Cybersecurity Maverick and Assistant Designer, excels in tech and design, ensuring security and contributing creatively to Aragya.',
+  },
+  {
+    name: 'Rudrangshu Bose',
+    role: 'Presentation Lead',
+    image: 'path_to_image',
+    description: 'Rudrangshu Bose, the Presentation Lead for Aragya, crafts compelling presentations that effectively communicate the project vision and progress.',
+  },
+  {
+    name: 'Daibik Sengupta',
+    role: 'Assistance',
+    image: 'path_to_image',
+    description: 'Daibik Sengupta, a first-year assistant currently in the learning phase, supports the Aragya project while gaining valuable experience.',
   },
 ];
 
