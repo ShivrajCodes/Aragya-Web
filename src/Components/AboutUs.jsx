@@ -42,7 +42,7 @@ const teamMembers = [
     name: 'Srijeeta Das',
     role: 'Lead Designer',
     image: 'path_to_image',
-    description: 'Srijeeta Das, the lead designer for Aragya, specializes in UI/UX and hardware design, creating intuitive interfaces and innovative hardware solutions.                           ',
+    description: 'Srijeeta Das, the lead designer for Aragya, specializes in UI/UX and hardware design, creating intuitive interfaces and innovative hardware solutions. &nbsp; &nbsp; &nbsp; &nbsp; s   &nbsp;                         ',
   },
   {
     name: 'Simantini Das',

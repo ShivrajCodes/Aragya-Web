@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar.tsx";
-import qvcssImage from "./images/qvcss.png";
+import qvcssImage from "./images/qvcss2.png";
 import doctorImage from "./images/doctor.png";
 import customer1Image from "./images/customer1.jpg";
 import customer2Image from "./images/customer2.jpeg";

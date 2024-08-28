@@ -21,6 +21,7 @@ function App() {
           <Route path="/view-parameters" element={<Parameters />} />
           <Route path="/about-us" element={<AboutUs />} /> 
         </Routes>
+        
       </div>
     </Router>
   );
