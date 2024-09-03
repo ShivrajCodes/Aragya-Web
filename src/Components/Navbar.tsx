@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Modal from './Modal.tsx'; 
 import logoImage from './images/logo.png';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -16,6 +18,9 @@ const Navbar: React.FC = () => {
     toggleDropdown();
     setIsMenuOpen(false);
   };
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <nav className="bg-gradient-to-r from-custom-black via-custom-dark-purple to-custom-purple text-white py-4 px-6 fixed top-0 left-0 right-0 z-50">
@@ -108,7 +113,7 @@ const Navbar: React.FC = () => {
                 </Link>
               )}
 
-              {/* Underline for each tab */}
+              
               {(location.pathname === `/${tab.replace(/\s+/g, '-').toLowerCase()}` ||
                 (tab === 'Home' && location.pathname === '/')) && (
                 <div
@@ -124,7 +129,10 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="hidden md:block">
-          <button className="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600">
+          <button
+            onClick={openModal}
+            className="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600"
+          >
             Patient DBMS
           </button>
         </div>
@@ -199,12 +207,17 @@ const Navbar: React.FC = () => {
             </div>
           ))}
           <div className="mt-4">
-            <button className="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600">
+            <button
+              onClick={openModal} 
+              className="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600"
+            >
               Patient DBMS
             </button>
           </div>
         </div>
       )}
+
+      <Modal isOpen={isModalOpen} onClose={closeModal} /> {/* Modal component */}
     </nav>
   );
 };
