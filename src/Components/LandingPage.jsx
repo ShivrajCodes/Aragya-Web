@@ -180,7 +180,7 @@ const LandingPage = () => {
 
       <div className="w-full px-6 md:px-10 mt-20 text-center space-y-5 fade-up">
         <h3 className="text-2xl font-semibold">
-          WHAT ARE YOU WAITING FOR? TRY OUR PRODUCT NOW!
+          What are you waiting for? Get yourself a free demo !!
         </h3>
 
         <button
