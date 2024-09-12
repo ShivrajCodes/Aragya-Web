@@ -10,7 +10,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-custom-purple rounded-lg shadow-lg max-w-lg w-full p-6 relative">
+      <div className="bg-custom-purple rounded-lg shadow-lg max-w-4xl w-full p-6 relative"> {/* Increased max width */}
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -18,8 +18,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           &times;
         </button>
         <iframe
-          src="http://localhost:5000"
-          className="w-full h-96 border-none"
+          src="http://127.0.0.1:5000/"
+          className="w-full h-[700px] border-none"  
           title="Patient DBMS"
         ></iframe>
       </div>
